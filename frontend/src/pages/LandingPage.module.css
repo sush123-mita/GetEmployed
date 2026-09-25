@@ -1,0 +1,291 @@
+.page {
+  background: var(--bg-base);
+  min-height: 100vh;
+}
+
+/* ── Landing Nav ────────────────────────────────────────────── */
+.landingNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-md);
+  letter-spacing: -0.01em;
+}
+
+.navLogoIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: var(--radius-md);
+}
+
+.navLogoText strong { font-weight: 800; }
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: var(--space-24);
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+}
+
+.heroInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-6);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.heroTitle {
+  color: var(--text-primary);
+  max-width: 640px;
+}
+
+.heroAccent {
+  background: linear-gradient(135deg, var(--indigo-600) 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
+  max-width: 520px;
+  color: var(--text-secondary);
+  font-size: var(--font-lg);
+  line-height: 1.65;
+}
+
+.heroCta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.primaryCta {
+  box-shadow: 0 4px 20px rgb(99 102 241 / 0.35);
+}
+
+.heroNote {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.01em;
+}
+
+/* Subtle dot-grid background */
+.heroBg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--slate-300) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.35;
+  pointer-events: none;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
+}
+
+/* ── Features ───────────────────────────────────────────────── */
+.features {
+  padding-block: var(--space-20);
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.featureCard {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.featureIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--accent-light);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.featureTitle {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.featureBody {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── How it works ───────────────────────────────────────────── */
+.how {
+  padding-block: var(--space-24);
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  max-width: 480px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: var(--space-6);
+  align-items: flex-start;
+  padding-bottom: var(--space-8);
+  position: relative;
+}
+
+.stepNum {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  background: var(--accent-light);
+  border: 1.5px solid var(--indigo-200);
+  border-radius: var(--radius-full);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.stepConnector {
+  position: absolute;
+  left: 21px;
+  top: 44px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-subtle);
+}
+
+.stepTitle {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+  padding-top: 10px;
+}
+
+.stepBody {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── CTA Banner ─────────────────────────────────────────────── */
+.ctaBanner {
+  background: var(--slate-900);
+  padding-block: var(--space-20);
+}
+
+.ctaInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+
+.ctaTitle {
+  font-size: var(--font-3xl);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.ctaBody {
+  color: var(--slate-400);
+  font-size: var(--font-lg);
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.footer {
+  background: var(--slate-950);
+  padding-block: var(--space-6);
+  text-align: center;
+}
+
+.footerText {
+  font-size: var(--font-xs);
+  color: var(--slate-500);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero { padding-top: 100px; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  .heroTitle { font-size: 2.2rem; }
+  .step { grid-template-columns: 48px 1fr; gap: var(--space-4); }
+  .ctaTitle { font-size: var(--font-2xl); }
+}

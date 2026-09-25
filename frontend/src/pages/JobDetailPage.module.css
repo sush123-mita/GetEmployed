@@ -1,0 +1,393 @@
+.page {
+  min-height: calc(100vh - 60px);
+  background: var(--bg-base);
+  padding-block: var(--space-6) var(--space-16);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.backBtn { color: var(--text-secondary); }
+
+/* ── Layout ──────────────────────────────────────────────────── */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  min-width: 0;
+}
+
+/* ── Header card ─────────────────────────────────────────────── */
+.headerCard {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.headerTop {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.companyIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.headerMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+.jobTitle {
+  font-size: var(--font-2xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: var(--space-1);
+}
+
+.company {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.savedActive {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-light);
+}
+
+/* ── Application Tracker Card ────────────────────────────────── */
+.trackerCard {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.trackerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trackerTitleWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.trackerIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.trackerTitle {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.trackerSub {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+.statusButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.statusBtn {
+  font-size: var(--font-xs);
+}
+
+.notesSection {
+  margin-top: var(--space-1);
+  padding-top: var(--space-3);
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.existingNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--bg-base);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+}
+
+.notesLabel {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.notesText {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.editNotesBtn {
+  align-self: flex-start;
+  font-size: 11px;
+  padding: 0;
+  margin-top: 2px;
+}
+
+.notesForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.notesActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.addNoteBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+/* ── Match Card & Reasons ────────────────────────────────────── */
+.matchCard {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sectionTitle {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.matchScoreRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: var(--bg-subtle);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+}
+
+.matchLabel {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 3px;
+}
+
+.matchSub {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.matchReasonsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--bg-base);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.reasonsList {
+  list-style: disc inside;
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.matchSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.matchSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.gapSub {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  margin-top: -4px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.gapChip {
+  display: inline-block;
+  font-size: var(--font-xs);
+  padding: 4px 10px;
+  border-radius: var(--radius-md);
+  background: var(--amber-50);
+  color: var(--amber-800);
+  border: 1px solid var(--amber-200);
+  font-weight: 500;
+}
+
+/* ── Description & Bullet lists ──────────────────────────────── */
+.descCard {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.bulletList {
+  list-style: disc inside;
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────── */
+.sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.sideCard {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sideTitle {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.sideItems {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sideItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sideLabel {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.sideValue {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    position: static;
+    order: -1;
+  }
+  .jobTitle { font-size: var(--font-xl); }
+}
+
+@media (max-width: 600px) {
+  .headerTop { flex-direction: column; }
+  .companyIcon { width: 44px; height: 44px; }
+  .headerActions { flex-direction: column; }
+  .headerActions .btn { width: 100%; justify-content: center; }
+}

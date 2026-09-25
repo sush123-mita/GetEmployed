@@ -1,0 +1,179 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--bg-base);
+  padding-block: var(--space-16);
+}
+
+.inner {
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-5);
+}
+
+/* ── Spinner ─────────────────────────────────────────────────── */
+.spinnerWrap {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+}
+
+.spinner {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2.5px solid var(--border-subtle);
+  border-top-color: var(--accent);
+}
+
+.spinnerInner {
+  position: absolute;
+  inset: 8px;
+  background: var(--accent-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinnerIcon {
+  font-size: 1.4rem;
+}
+
+/* ── Headings ────────────────────────────────────────────────── */
+.heading {
+  font-size: var(--font-xl);
+  color: var(--text-primary);
+}
+
+.fileName {
+  font-size: var(--font-sm);
+  color: var(--text-tertiary);
+  background: var(--bg-subtle);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+/* ── Progress Bar ────────────────────────────────────────────── */
+.progressTrack {
+  width: 100%;
+  max-width: 360px;
+  height: 6px;
+  background: var(--border-subtle);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: -4px;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+/* ── Stages ──────────────────────────────────────────────────── */
+.stages {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 360px;
+  text-align: left;
+  padding: var(--space-5) var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.stage {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+  transition: opacity var(--duration-base);
+}
+.stage:last-child { border-bottom: none; }
+
+.stagePending { opacity: 0.35; }
+
+.stageIndicator {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.stageCheck { color: var(--success); display: flex; }
+.stageDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: block;
+}
+.stageDotPending {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border-default);
+  display: block;
+}
+
+.stageText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stageLabel {
+  font-size: var(--font-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.stageDone .stageLabel { color: var(--text-secondary); }
+.stagePending .stageLabel { color: var(--text-tertiary); }
+
+.stageDetail {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* ── Footer Actions ──────────────────────────────────────────── */
+.footerActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.cancelBtn {
+  color: var(--text-tertiary);
+}
+.cancelBtn:hover {
+  color: var(--danger);
+  background: var(--danger-light);
+}
+
+/* ── Note ────────────────────────────────────────────────────── */
+.note {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  max-width: 320px;
+  line-height: 1.5;
+}

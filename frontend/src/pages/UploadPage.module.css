@@ -1,0 +1,250 @@
+.page {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  background: var(--bg-base);
+  padding-block: var(--space-16);
+}
+
+.inner {
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+/* ── Error Banner ───────────────────────────────────────────── */
+.errorBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  background: var(--danger-light);
+  border: 1px solid var(--rose-100);
+  border-radius: var(--radius-lg);
+  color: var(--danger);
+  margin-bottom: var(--space-5);
+  font-size: var(--font-sm);
+}
+
+.errorBanner strong { display: block; margin-bottom: var(--space-1); font-weight: 600; }
+.errorBanner p { color: var(--text-secondary); margin: 0; }
+.errorIcon { flex-shrink: 0; margin-top: 2px; }
+
+/* ── Dropzone ───────────────────────────────────────────────── */
+.dropzone {
+  border: 2px dashed var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12) var(--space-8);
+  text-align: center;
+  cursor: pointer;
+  transition:
+    border-color var(--duration-base) var(--ease-in-out),
+    background var(--duration-base) var(--ease-in-out),
+    box-shadow var(--duration-base) var(--ease-in-out);
+  background: var(--bg-surface);
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropzone--idle:hover {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  box-shadow: 0 0 0 4px rgb(99 102 241 / 0.06);
+}
+
+.dropzone--active {
+  border-color: var(--accent);
+  background: var(--accent-light);
+  box-shadow: 0 0 0 4px rgb(99 102 241 / 0.1);
+}
+
+.dropzone--reject {
+  border-color: var(--danger);
+  background: var(--danger-light);
+  box-shadow: 0 0 0 4px rgb(244 63 94 / 0.08);
+}
+
+.dropzone--filled {
+  border-style: solid;
+  border-color: var(--emerald-400);
+  background: var(--success-light);
+  cursor: default;
+}
+
+/* ── Drop content ───────────────────────────────────────────── */
+.dropContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.uploadIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-xl);
+  background: var(--bg-subtle);
+  color: var(--text-tertiary);
+  transition: background var(--duration-base), color var(--duration-base), transform var(--duration-slow) var(--ease-out);
+}
+
+.uploadIconActive {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-4px);
+}
+
+.dropText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.dropTextPrimary {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.browse {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.dropTextSub {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.dropTextActive {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.dropTextReject {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--danger);
+}
+
+/* ── File preview ───────────────────────────────────────────── */
+.filePreview {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  width: 100%;
+  padding: var(--space-2);
+}
+
+.fileEmoji {
+  font-size: 2rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.fileMeta {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.fileName {
+  display: block;
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileSize {
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+}
+
+.fileStatus {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-xs);
+  font-weight: 600;
+  color: var(--emerald-600);
+  flex-shrink: 0;
+}
+
+.removeBtn {
+  flex-shrink: 0;
+  color: var(--text-tertiary);
+}
+
+/* ── Reject message ─────────────────────────────────────────── */
+.rejectMsg {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--danger);
+  font-size: var(--font-xs);
+  margin-top: var(--space-2);
+}
+
+/* ── Format badges ──────────────────────────────────────────── */
+.formats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-top: var(--space-4);
+}
+
+.formatBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 0.2rem 0.6rem;
+  font-size: var(--font-xs);
+  font-weight: 500;
+  color: var(--text-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  background: var(--bg-surface);
+}
+
+/* ── Analyze button ─────────────────────────────────────────── */
+.analyzeBtn {
+  width: 100%;
+  margin-top: var(--space-6);
+  justify-content: center;
+}
+
+.privacyNote {
+  text-align: center;
+  font-size: var(--font-xs);
+  color: var(--text-tertiary);
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .dropzone { padding: var(--space-8) var(--space-4); min-height: 180px; }
+  .filePreview { gap: var(--space-3); }
+}
